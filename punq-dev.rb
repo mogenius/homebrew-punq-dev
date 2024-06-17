@@ -4,62 +4,62 @@ class PunqDev < Formula
   
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.68/punq-dev-v1.5.0-develop.68-darwin-arm64.tar.gz"
-      sha256 "47cd39f9c89a39b6604345e63335f5c9e7929cfb2e831e92d7005029a7840fe0"
+      url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.69/punq-dev-v1.5.0-develop.69-darwin-arm64.tar.gz"
+      sha256 "bd3052e653de5a11fba5b5a52121c719a52f34cf468acfbb4ef04a35cc047437"
     elsif Hardware::CPU.intel?
-      url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.68/punq-dev-v1.5.0-develop.68-darwin-amd64.tar.gz"
-      sha256 "a1e99e1c45f7974f08a49669605006bf69352e0d774e2b7d37ce71354c4aa2cb"
+      url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.69/punq-dev-v1.5.0-develop.69-darwin-amd64.tar.gz"
+      sha256 "104f36987aa394a7e46c90b3d11cdfd330b9d1d91389aa0d5b4c5f96eb18af8c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.68/punq-dev-v1.5.0-develop.68-linux-amd64.tar.gz"
-        sha256 "04a21e164ef1f13a676b0f23d94046a0c352d2cbeaaabd62c25a66f0731f914b"
+        url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.69/punq-dev-v1.5.0-develop.69-linux-amd64.tar.gz"
+        sha256 "f658e5fc241b5a3773ba8eb22f2f89d75d559c2a1bd7b7126149ed9bc3d264d0"
       else
-        url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.68/punq-dev-v1.5.0-develop.68-linux-386.tar.gz"
-        sha256 "b4f83b394f8c122f689a02cc7170a24940e02516f9999fb7dc70089db496d7cb"
+        url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.69/punq-dev-v1.5.0-develop.69-linux-386.tar.gz"
+        sha256 "a800aa19395d6c450a2fbce1e49f1f1b01b4fa04ad5c9c56e53216e426ecade1"
       end
     elsif Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.68/punq-dev-v1.5.0-develop.68-linux-arm64.tar.gz"
-        sha256 "7b2ee0ae91e2820a7777dd943fcd81c62534abfd625bf5224af16354b9ae4080"
+        url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.69/punq-dev-v1.5.0-develop.69-linux-arm64.tar.gz"
+        sha256 "6738b01376414a8d7b06b610cbf9b88816545f2b10ba7ddba1577013c429ee80"
       else
-        url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.68/punq-dev-v1.5.0-develop.68-linux-arm.tar.gz"
-        sha256 "6b5f87cc59ec32340220d54995a0d95cbb4576099f0a78c0fdd52ec761bbfeb1"
+        url "https://github.com/mogenius/homebrew-punq-dev/releases/download/v1.5.0-develop.69/punq-dev-v1.5.0-develop.69-linux-arm.tar.gz"
+        sha256 "bf14ebc430ef7207f95438bbb00170145d8409b82941c5f4def51e6581e958d0"
       end
     end
   end
   
-  version "1.5.0-develop.68"
+  version "1.5.0-develop.69"
   license "MIT"
 
   def install
   if OS.mac?
     if Hardware::CPU.arm?
       # Installation steps for macOS ARM64
-      bin.install "punq-dev-v1.5.0-develop.68-darwin-arm64" => "punq-dev"
+      bin.install "punq-dev-v1.5.0-develop.69-darwin-arm64" => "punq-dev"
     elsif Hardware::CPU.intel?
       # Installation steps for macOS AMD64
-      bin.install "punq-dev-v1.5.0-develop.68-darwin-amd64" => "punq-dev"
+      bin.install "punq-dev-v1.5.0-develop.69-darwin-amd64" => "punq-dev"
     end
   elsif OS.linux?
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         # Installation steps for Linux AMD64
-        bin.install "punq-dev-v1.5.0-develop.68-linux-amd64" => "punq-dev"
+        bin.install "punq-dev-v1.5.0-develop.69-linux-amd64" => "punq-dev"
       else
         # Installation steps for Linux 386
-        bin.install "punq-dev-v1.5.0-develop.68-linux-386" => "punq-dev"
+        bin.install "punq-dev-v1.5.0-develop.69-linux-386" => "punq-dev"
       end
     elsif Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         # Installation steps for Linux ARM64
-        bin.install "punq-dev-v1.5.0-develop.68-linux-arm64" => "punq-dev"
+        bin.install "punq-dev-v1.5.0-develop.69-linux-arm64" => "punq-dev"
       else
         # Installation steps for Linux ARM
-        bin.install "punq-dev-v1.5.0-develop.68-linux-arm" => "punq-dev"
+        bin.install "punq-dev-v1.5.0-develop.69-linux-arm" => "punq-dev"
       end
     end
   end
